@@ -1,0 +1,18 @@
+{
+    "waila": {
+        "settings": {
+            "name": "Waila",
+            "enabled": {
+                "name": "Aktiviert"
+            },
+            "range": {
+                "name": "Reichweite"
+            }
+        },
+        "widget": {
+            "block": "Block",
+            "fluid": "Flüssigkeit",
+            "placeholder": "Luft"
+        }
+    }
+}
