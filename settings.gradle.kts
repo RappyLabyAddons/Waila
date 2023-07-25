@@ -1,4 +1,4 @@
-rootProject.name = "labymod4-addon-template"
+rootProject.name = "waila"
 
 pluginManagement {
     val labyGradlePluginVersion = "0.3.28"

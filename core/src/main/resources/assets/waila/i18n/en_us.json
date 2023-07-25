@@ -1,0 +1,10 @@
+{
+    "waila": {
+        "settings": {
+            "name": "Waila",
+            "enabled": {
+                "name": "Enabled"
+            }
+        }
+    }
+}
