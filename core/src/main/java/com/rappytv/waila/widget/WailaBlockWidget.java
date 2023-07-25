@@ -1,6 +1,7 @@
 package com.rappytv.waila.widget;
 
 import com.rappytv.waila.WailaAddon;
+import net.labymod.api.client.component.Component;
 import net.labymod.api.client.gui.hud.hudwidget.text.TextHudWidget;
 import net.labymod.api.client.gui.hud.hudwidget.text.TextHudWidgetConfig;
 import net.labymod.api.client.gui.hud.hudwidget.text.TextLine;
@@ -24,20 +25,33 @@ public class WailaBlockWidget extends TextHudWidget<TextHudWidgetConfig> {
     public void load(TextHudWidgetConfig config) {
         super.load(config);
 
-        String translation = "waila.widget." + (fluid ? "fluid" : "block");
         line = super.createLine(
-            I18n.translate(translation + ".name"),
-            I18n.translate(translation + ".placeholder")
+            Component.translatable("waila.widget." + (fluid ? "fluid" : "block")),
+            I18n.translate("waila.widget.placeholder")
         );
     }
 
     @Override
     public void onTick(boolean isEditorContext) {
-        if(isEditorContext)
-            lookingAt = "";
-        else
-            lookingAt = addon.api().getLookingAt(fluid, addon.configuration().range().get());
+        String name;
+        int range = addon.configuration().range().get();
 
+        if(isEditorContext)
+            name = I18n.translate("waila.widget.placeholder");
+        else {
+            if(fluid) {
+                String fluid = addon.api().getLookingAt(true, range);
+                String block = addon.api().getLookingAt(false, range);
+
+                if(fluid != null && fluid.equals(block))
+                    name = null;
+                else
+                    name = addon.api().getLookingAt(true, range);
+            } else
+                name = addon.api().getLookingAt(false, range);
+        }
+
+        lookingAt = name != null ? name : I18n.translate("waila.widget.placeholder");
         line.updateAndFlush(lookingAt);
     }
 
@@ -45,6 +59,6 @@ public class WailaBlockWidget extends TextHudWidget<TextHudWidgetConfig> {
     public boolean isVisibleInGame() {
         return
             lookingAt != null &&
-            !lookingAt.equals("Air");
+                !lookingAt.equals(I18n.translate("waila.widget.placeholder"));
     }
 }
