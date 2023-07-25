@@ -3,7 +3,7 @@ package com.rappytv.waila;
 import com.rappytv.waila.config.WailaConfig;
 import com.rappytv.waila.core.generated.DefaultReferenceStorage;
 import com.rappytv.waila.util.IWailaApi;
-import com.rappytv.waila.widget.WailaBlockWidget;
+import com.rappytv.waila.widget.WailaWidget;
 import net.labymod.api.addon.LabyAddon;
 import net.labymod.api.models.addon.annotation.AddonMain;
 
@@ -17,8 +17,8 @@ public class WailaAddon extends LabyAddon<WailaConfig> {
         api = ((DefaultReferenceStorage) this.referenceStorageAccessor()).iWailaApi();
 
         registerSettingCategory();
-        labyAPI().hudWidgetRegistry().register(new WailaBlockWidget(this, false));
-        labyAPI().hudWidgetRegistry().register(new WailaBlockWidget(this, true));
+        labyAPI().hudWidgetRegistry().register(new WailaWidget(this, false));
+        labyAPI().hudWidgetRegistry().register(new WailaWidget(this, true));
     }
 
     @Override

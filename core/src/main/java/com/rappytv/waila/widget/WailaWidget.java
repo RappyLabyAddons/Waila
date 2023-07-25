@@ -7,14 +7,14 @@ import net.labymod.api.client.gui.hud.hudwidget.text.TextHudWidgetConfig;
 import net.labymod.api.client.gui.hud.hudwidget.text.TextLine;
 import net.labymod.api.util.I18n;
 
-public class WailaBlockWidget extends TextHudWidget<TextHudWidgetConfig> {
+public class WailaWidget extends TextHudWidget<TextHudWidgetConfig> {
 
     private final WailaAddon addon;
     private final boolean fluid;
     private TextLine line;
     private String lookingAt;
 
-    public WailaBlockWidget(WailaAddon addon, boolean fluid) {
+    public WailaWidget(WailaAddon addon, boolean fluid) {
         super("waila_" + (fluid ? "fluid" : "block"));
 
         this.addon = addon;
