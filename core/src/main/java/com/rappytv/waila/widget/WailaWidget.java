@@ -6,6 +6,8 @@ import net.labymod.api.client.component.Component;
 import net.labymod.api.client.gui.hud.hudwidget.text.TextHudWidget;
 import net.labymod.api.client.gui.hud.hudwidget.text.TextHudWidgetConfig;
 import net.labymod.api.client.gui.hud.hudwidget.text.TextLine;
+import net.labymod.api.client.gui.icon.Icon;
+import net.labymod.api.client.resources.ResourceLocation;
 import net.labymod.api.util.I18n;
 
 public class WailaWidget extends TextHudWidget<TextHudWidgetConfig> {
@@ -21,6 +23,10 @@ public class WailaWidget extends TextHudWidget<TextHudWidgetConfig> {
         this.addon = addon;
         this.fluid = fluid;
         bindCategory(category);
+        setIcon(Icon.texture(ResourceLocation.create(
+            "waila",
+            String.format("textures/%s.png", fluid ? "fluid" : "grass")
+        )));
     }
 
     @Override
