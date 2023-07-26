@@ -19,9 +19,9 @@ labyMod {
         namespace = "waila"
         displayName = "Waila"
         author = "RappyTV"
-        description = "Adds a Widget, which displays what block you're looking at."
+        description = "Adds Widgets, which display what block and fluid you're looking at."
         minecraftVersion = "1.12<1.20.1"
-        version = System.getenv().getOrDefault("VERSION", "0.0.9")
+        version = System.getenv().getOrDefault("VERSION", "1.0.0")
     }
 
     minecraft {
