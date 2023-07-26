@@ -9,10 +9,26 @@
                 "name": "Reichweite"
             }
         },
+        "hudWidget": {
+            "waila_block": {
+                "name": "Angeschauter Block"
+            },
+            "waila_fluid": {
+                "name": "Angeschaute Flüssigkeit"
+            }
+        },
         "widget": {
             "block": "Block",
             "fluid": "Flüssigkeit",
             "placeholder": "Luft"
+        }
+    },
+    "labymod": {
+        "hudWidgetCategory": {
+            "waila": {
+                "name": "Waila Widgets",
+                "description": "Alle Widgets, die zum Waila addon gehören."
+            }
         }
     }
 }

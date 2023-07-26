@@ -9,10 +9,26 @@
                 "name": "Range"
             }
         },
+        "hudWidget": {
+            "waila_block": {
+                "name": "Targetted Block"
+            },
+            "waila_fluid": {
+                "name": "Targetted Fluid"
+            }
+        },
         "widget": {
             "block": "Block",
             "fluid": "Fluid",
             "placeholder": "Air"
+        }
+    },
+    "labymod": {
+        "hudWidgetCategory": {
+            "waila": {
+                "name": "Waila Widgets",
+                "description": "All widgets that belong to the Waila addon."
+            }
         }
     }
 }
