@@ -4,7 +4,7 @@ Adds Widgets, which display what block and fluid you're looking at.
 ### Installation
 1. Press `Win` + `R`
 2. Paste this into the window that popped up: `%appdata%/.minecraft/LabyMod-neo/addons` and press enter
-3. It should open your Labymod addon directory; Paste the [Waila.jar](https://github.com/RappyLabyAddons/Waila/releases/download/v1.0.0/Waila.jar) in there.
+3. It should open your Labymod addon directory; Paste the [Waila.jar](https://github.com/RappyLabyAddons/Waila/releases/latest/download/Waila.jar) in there.
 4. Launch your Labymod client.
 
 If you have any problems with the addon/have update ideas, feel free to
