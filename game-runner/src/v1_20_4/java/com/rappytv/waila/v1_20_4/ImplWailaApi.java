@@ -1,4 +1,4 @@
-package com.rappytv.waila.v1_20_3;
+package com.rappytv.waila.v1_20_4;
 
 import com.rappytv.waila.util.IWailaApi;
 import net.labymod.api.models.Implements;
