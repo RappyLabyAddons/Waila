@@ -20,8 +20,8 @@ labyMod {
         displayName = "Waila"
         author = "RappyTV"
         description = "Adds Widgets, which display what block and fluid you're looking at."
-        minecraftVersion = "1.12<1.20.4"
-        version = System.getenv().getOrDefault("VERSION", "1.0.3")
+        minecraftVersion = "1.12<1.21"
+        version = System.getenv().getOrDefault("VERSION", "1.0.4")
     }
 
     minecraft {
@@ -36,7 +36,10 @@ labyMod {
                 "1.19.4",
                 "1.20.1",
                 "1.20.2",
-                "1.20.4"
+                "1.20.4",
+                "1.20.5",
+                "1.20.6",
+                "1.21"
         ) { version, provider ->
             configureRun(provider, version)
         }
