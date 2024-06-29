@@ -1,7 +1,7 @@
 rootProject.name = "waila"
 
 pluginManagement {
-    val labyGradlePluginVersion = "0.3.38"
+    val labyGradlePluginVersion = "0.4.1"
     plugins {
         id("net.labymod.gradle") version (labyGradlePluginVersion)
     }
