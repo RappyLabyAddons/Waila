@@ -15,8 +15,12 @@ import net.labymod.api.configuration.loader.property.ConfigProperty;
 
 public class WailaHudWidget extends WidgetHudWidget<WailaHudWidgetConfig> {
 
+    public static final String RANGE_CHANGE_REASON = "range_change";
+    public static final String BLOCK_CHANGE_REASON = "block_change";
+
     private final WailaAddon addon;
     private final WailaWidgetType type;
+    public WailaResult result;
 
     public WailaHudWidget(WailaAddon addon, HudWidgetCategory category, WailaWidgetType type) {
         super("waila_" + type.name().toLowerCase(), WailaHudWidgetConfig.class);
@@ -36,7 +40,7 @@ public class WailaHudWidget extends WidgetHudWidget<WailaHudWidgetConfig> {
 
         config.range.addChangeListener((property, oldValue, newValue) ->
             Laby.labyAPI().minecraft().executeOnRenderThread(() ->
-                this.requestUpdate("UPDATED_RANGE")
+                this.requestUpdate(RANGE_CHANGE_REASON)
             )
         );
     }
@@ -45,6 +49,8 @@ public class WailaHudWidget extends WidgetHudWidget<WailaHudWidgetConfig> {
     public void initialize(HudWidgetWidget widget) {
         super.initialize(widget);
 
+        WailaWidget wailaWidget = new WailaWidget(this);
+        widget.addChild(wailaWidget);
         widget.addId("waila");
     }
 
