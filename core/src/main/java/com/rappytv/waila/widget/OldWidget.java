@@ -10,14 +10,14 @@ import net.labymod.api.client.gui.icon.Icon;
 import net.labymod.api.client.resources.ResourceLocation;
 import net.labymod.api.util.I18n;
 
-public class WailaWidget extends TextHudWidget<TextHudWidgetConfig> {
+public class OldWidget extends TextHudWidget<TextHudWidgetConfig> {
 
     private final WailaAddon addon;
     private final boolean fluid;
     private TextLine line;
     private String lookingAt;
 
-    public WailaWidget(WailaAddon addon, HudWidgetCategory category, boolean fluid) {
+    public OldWidget(WailaAddon addon, HudWidgetCategory category, boolean fluid) {
         super("waila_" + (fluid ? "fluid" : "block"));
 
         this.addon = addon;
@@ -42,7 +42,7 @@ public class WailaWidget extends TextHudWidget<TextHudWidgetConfig> {
     @Override
     public void onTick(boolean isEditorContext) {
         String name;
-        int range = addon.configuration().range().get();
+        int range = 5;
 
         if(isEditorContext)
             name = I18n.translate("waila.widget.placeholder");
