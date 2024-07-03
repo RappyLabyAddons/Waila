@@ -1,8 +1,8 @@
 package com.rappytv.waila.widget;
 
 import com.rappytv.waila.WailaAddon;
-import com.rappytv.waila.widget.category.WailaCategory;
 import net.labymod.api.client.component.Component;
+import net.labymod.api.client.gui.hud.binding.category.HudWidgetCategory;
 import net.labymod.api.client.gui.hud.hudwidget.text.TextHudWidget;
 import net.labymod.api.client.gui.hud.hudwidget.text.TextHudWidgetConfig;
 import net.labymod.api.client.gui.hud.hudwidget.text.TextLine;
@@ -17,7 +17,7 @@ public class WailaWidget extends TextHudWidget<TextHudWidgetConfig> {
     private TextLine line;
     private String lookingAt;
 
-    public WailaWidget(WailaAddon addon, WailaCategory category, boolean fluid) {
+    public WailaWidget(WailaAddon addon, HudWidgetCategory category, boolean fluid) {
         super("waila_" + (fluid ? "fluid" : "block"));
 
         this.addon = addon;
