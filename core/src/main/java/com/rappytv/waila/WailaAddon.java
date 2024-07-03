@@ -1,11 +1,14 @@
 package com.rappytv.waila;
 
-import com.rappytv.waila.config.WailaConfig;
+import com.rappytv.waila.WailaAddon.WailaConfig;
 import com.rappytv.waila.core.generated.DefaultReferenceStorage;
 import com.rappytv.waila.util.IWailaApi;
 import com.rappytv.waila.widget.WailaWidget;
+import net.labymod.api.addon.AddonConfig;
 import net.labymod.api.addon.LabyAddon;
 import net.labymod.api.client.gui.hud.binding.category.HudWidgetCategory;
+import net.labymod.api.configuration.loader.annotation.Exclude;
+import net.labymod.api.configuration.loader.property.ConfigProperty;
 import net.labymod.api.models.addon.annotation.AddonMain;
 
 @AddonMain
@@ -31,5 +34,16 @@ public class WailaAddon extends LabyAddon<WailaConfig> {
 
     public IWailaApi api() {
         return api;
+    }
+
+    public static class WailaConfig extends AddonConfig {
+
+        @Exclude
+        private final ConfigProperty<Boolean> enabled = new ConfigProperty<>(true);
+
+        @Override
+        public ConfigProperty<Boolean> enabled() {
+            return enabled;
+        }
     }
 }
