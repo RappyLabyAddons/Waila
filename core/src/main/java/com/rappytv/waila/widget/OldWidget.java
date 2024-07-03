@@ -18,7 +18,7 @@ public class OldWidget extends TextHudWidget<TextHudWidgetConfig> {
     private String lookingAt;
 
     public OldWidget(WailaAddon addon, HudWidgetCategory category, boolean fluid) {
-        super("waila_" + (fluid ? "fluid" : "block"));
+        super("oldwaila_" + (fluid ? "fluid" : "block"));
 
         this.addon = addon;
         this.fluid = fluid;
