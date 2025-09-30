@@ -1,4 +1,7 @@
-# Waila (What am I looking at)
+# 🗄️ ARCHIVED
+Waila is now a native feature of LabyMod
+
+### Waila (What am I looking at)
 ![Downloads](https://labybadges-delta.vercel.app/api/downloads/waila/formatted)<br>
 Adds Widgets, which display what block and fluid you're looking at.
 
